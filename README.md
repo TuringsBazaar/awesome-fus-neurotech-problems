@@ -2,7 +2,6 @@
 
 This repo contains problems in FUS, acoustic physics, and wider neurotech scanned from 1) Emergent Mind, which lists open research questions, and 2) Terminal Bench Science, being benchmark tasks or proposals with submission statuses.
 
-
 ## Emergent Mind — Focused ultrasound
 
 - Define appropriate neuromodulation dose parameters for TUS ([link](https://www.emergentmind.com/open-problems/define-appropriate-tus-dose-parameters))
@@ -40,115 +39,6 @@ This repo contains problems in FUS, acoustic physics, and wider neurotech scanne
 - Account for scalp-generated photoacoustic signals and skull reflections that corrupt cortical signals ([link](https://www.emergentmind.com/open-problems/accounting-for-scalp-photoacoustic-reflections-in-transcranial-pact))
 
   Develop a transcranial photoacoustic computed tomography reconstruction framework that models and accounts for photoacoustic signals generated outside the skull (including hair follicles and melanin in the scalp), their reflections from the skull, and the resulting deterministic background to prevent corruption of intracranial cortical signals.
-
-## Emergent Mind — Neurotechnology
-
-- Shared modeling across stimulation modalities ([link](https://www.emergentmind.com/open-problems/shared-modeling-across-neural-stimulation-modalities))
-
-  Determine how to train a shared neural stimulation response model on datasets that mix modalities, particularly when electrical stimulation and optogenetic stimulation produce qualitatively different artifact time courses.
-
-- Cause of post-training functional connectivity changes: SMA–M1 network stimulation versus M1-only stimulation ([link](https://www.emergentmind.com/open-problems/sma-m1-fc-change-cause-network-vs-m1-alone))
-
-  Determine whether the post-training differential change in resting-state EEG functional connectivity (imaginary part of coherence) between the left supplementary motor area (SMA-proper) and left primary motor cortex (M1) observed after reinforcement learning-based closed-loop EEG-triggered paired-pulse TMS arises specifically from paired stimulation of the SMA–M1 network (conditioning stimulus over SMA-proper preceding M1 stimulation by 6 ms) or whether equivalent connectivity changes can be induced by effective stimulation of M1 alone without SMA conditioning.
-
-- Long-term safety of optogenetic gene delivery and light exposure ([link](https://www.emergentmind.com/open-problems/long-term-effects-of-optogenetics-retroviral-opsin-light-exposure))
-
-  Determine the long-term effects on neurons of retroviral vector-mediated genome insertion, expression of non-human opsin proteins, and prolonged optical exposure used in optogenetic neuromodulation, in order to establish the safety and stability required for translation to human applications.
-
-- Overall efficiency of the proposed spatio-temporal Fourier synthesis methods ([link](https://www.emergentmind.com/open-problems/overall-efficiency-stfs-methods))
-
-  Determine the overall efficiency of the spatio-temporal Fourier synthesis deep-brain stimulation techniques that employ multiple electrode pairs with sinusoidal currents, including the capability to deliver effective stimulation to targeted deep-brain regions.
-
-- Optimal spike waveform shapes and timing for Fourier-synthesized deep-brain stimulation ([link](https://www.emergentmind.com/open-problems/optimal-spike-shapes-and-timing-stfs-dbs))
-
-  Determine the optimal spike waveform shapes and temporal timing parameters for non-invasive deep-brain stimulation generated via spatio-temporal Fourier synthesis using multiple electrode pairs driven by sinusoidal harmonics, with the goal of concentrating stimulus power into brief high-amplitude pulses while maintaining low skin sensation.
-
-- Efficacy of chirping harmonic frequencies for enhanced stimulation ([link](https://www.emergentmind.com/open-problems/efficacy-chirping-harmonics-stfs-dbs))
-
-  Ascertain whether linearly increasing (chirping) harmonic frequencies in the sinusoidal components used for spatio-temporal Fourier synthesis enhance the effectiveness of non-invasive deep-brain stimulation compared to non-chirped harmonics.
-
-- Effectiveness of noisy excitation using irrational frequency components ([link](https://www.emergentmind.com/open-problems/effectiveness-noisy-excitation-irrational-frequencies))
-
-  Determine whether quasi-periodic noisy excitation produced by combining sinusoidal components with irrational frequency values is more effective for non-invasive deep-brain stimulation via spatio-temporal Fourier synthesis than deterministic harmonic configurations.
-
-- Validity of Gabriel et al. tissue dielectric model below 10 Hz ([link](https://www.emergentmind.com/open-problems/validity-of-gabriel-model-below-10-hz))
-
-  Ascertain the validity of the Gabriel et al. parametric model for dielectric properties of biological tissues at frequencies below 10 Hz, which lie outside the experimental data range used for fitting, to ensure accurate selection of conductivity and permittivity for low-frequency neuromodulation waveforms.
-
-- Transferability of the EEG-based speech decoder to new participants ([link](https://www.emergentmind.com/open-problems/transferability-eeg-speech-decoder-across-participants))
-
-  Determine whether the EEG-based speech decoding system trained via CLIP alignment between EEG and pre-trained audio embeddings using 175 hours of overt speech data from a single healthy participant can be transferred to other participants, and quantify the amount of participant-specific data required to enable such transferability through fine-tuning or adaptation.
-
-- Validation of non-invasive EEG speech decoding in individuals with speech disabilities and attempted speech ([link](https://www.emergentmind.com/open-problems/validate-eeg-speech-decoding-in-speech-disabilities-and-attempted-speech))
-
-  Validate whether high-accuracy non-invasive EEG-based speech decoding, trained on overt speech from healthy individuals, can be achieved in individuals with speech disabilities, including using non-invasive recordings during attempted speech under data collection protocols analogous to those used for invasive measurements.
-
-- Effectiveness of single-model approaches for silent speech decoding under heterogeneous EEG/EMG electrode configurations and transfer to patients ([link](https://www.emergentmind.com/open-problems/effectiveness-heterogeneous-electrodes-silent-speech-decoding-and-transfer))
-
-  Determine the effectiveness of single-model deep neural network architectures that handle heterogeneous EEG and electromyography (EMG) electrode configurations for silent speech decoding tasks, and ascertain the efficacy of knowledge transfer from models trained on healthy individuals to patients with neurodegenerative diseases, when using non-invasive EEG/EMG signals.
-
-- Bridge laboratory BCI paradigms and embodied, fluid robotic interaction ([link](https://www.emergentmind.com/open-problems/bridge-bci-paradigms-and-embodied-fluid-robotic-interaction))
-
-  Develop EEG-based brain–computer interface control approaches that enable seamless, continuous, and intuitive interaction with mobile robots such as assistive robotic wheelchairs, thereby bridging the gap between laboratory-designed discrete BCI paradigms (including spontaneous motor imagery and evoked responses) and the embodied, fluid robotic control required for real-world navigation.
-
-- Improve post-decoding trajectory regulation and control smoothness in continuous BCI control ([link](https://www.emergentmind.com/open-problems/improve-post-decoding-trajectory-regulation-and-smoothness))
-
-  Develop and integrate post-decoding trajectory regulation mechanisms to enhance control smoothness for continuous pursuit motion control using the proposed Bayesian acceleration-level EEG decoder, addressing the identified open need for improved trajectory regulation and smoothness.
-
-- Real-time feasibility of online EEG-based intention decoding in mixed reality ([link](https://www.emergentmind.com/open-problems/online-eeg-intention-decoding-real-time-latency-constraints))
-
-  Determine whether the computational requirements and end-to-end latency of online, real-time classification of user intention (Select versus Observe) from anticipatory EEG activity using deep learning models are compatible with mixed reality interaction, including the streaming preprocessing and inference necessary for immediate applicability in live systems.
-
-- Establish zero-shot generalization without target-patient iEEG ([link](https://www.emergentmind.com/open-problems/zero-shot-generalization-without-target-patient-ieeg))
-
-  Determine what intracranial events, features, or waveforms generalize across patients and sites without using target-patient intracranial EEG for model fitting, calibration, contact selection, or hyperparameter choice.
-
-- Quantify the scalp-conditioned information increment ([link](https://www.emergentmind.com/open-problems/quantify-scalp-conditioned-information-increment))
-
-  Determine how much information about a specified intracranial target is contributed by the concurrent scalp EEG segment beyond non-concurrent information such as anatomy, domain, task context, and permissible target-patient adaptation data.
-
-- External and Multi-Center Validation of Graph Topology Choices ([link](https://www.emergentmind.com/open-problems/external-multi-center-validation-graph-topology-ez-localization))
-
-  Establish the external cross-dataset and multi-center validity of graph-topology choices for resting-state stereo-electroencephalography epileptogenic-zone localization, including their robustness to differences in electrode layouts and labeling practices.
-
-- Estimating cross-modal transfer functions without source ground truth ([link](https://www.emergentmind.com/open-problems/estimate-cross-modal-transfer-functions-without-source-ground-truth))
-
-  Develop methods to estimate the cross-modal transfer-function matrices required for temporal geometric eigenmode source localisation from experimental scalp EEG without direct knowledge of the underlying neural source activity.
-
-- Physiological basis of performance degradation in living neural reservoirs ([link](https://www.emergentmind.com/open-problems/determine-physiological-basis-of-performance-degradation-in-living-neural-reservoirs))
-
-  Determine the physiological mechanisms responsible for the post‑training degradation of classification accuracy in reservoir computing experiments using optogenetically stimulated motoneuron cultures on microelectrode arrays, specifically the drift in network dynamics that collapses initially separable latent trajectories into poorly separable clusters within a few hours after training.
-
-## TB-Science — Ultrasound
-
-- [TASK: Applied Mathematics] Escaping Cycle Skipping in Frequency-Domain Full-Waveform Inversion Without a Low-Frequency Backbone ([link](https://github.com/harbor-framework/terminal-bench-science/pull/997))
-- Add task: usct-soundspeed-fwi (viscoacoustic USCT full-waveform inversion) ([link](https://github.com/harbor-framework/terminal-bench-science/pull/387))
-
-## TB-Science — Neurotechnology
-
-- Closed-loop control of non-stationary Parkinsonian beta oscillations for deep brain stimulation ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/634))
-- [WIP] [TASK: Electrical Engineering] neuralink-network-soc — chained ASIC NoC and thermal envelope ([link](https://github.com/harbor-framework/terminal-bench-science/pull/1515))
-- [TASK: Neuroscience] EEG P300 ERP Recovery ([link](https://github.com/harbor-framework/terminal-bench-science/pull/282))
-- [TASK: Neuroscience] Frontotemporal LFP bursting metrics for object working memory (OpenNeuro ds006136) ([link](https://github.com/harbor-framework/terminal-bench-science/pull/638))
-- Blind estimation of neural signal complexity from EEG ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/283))
-- Estimating contextual semantic contributions to continuous-speech EEG under acoustic controls ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/1689))
-- Full MEG pipeline from raw recording to cortical source dynamics ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/104))
-- Neurodata Without Boredom: Benchmarking Agentic AI for Data Reuse ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/172))
-- Linear dynamic causal modeling with closed-form inversion and Bayesian model comparison via synthetic fixture verification ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/118))
-- [TASK: Life Sciences] Mixed-Cohort pCASL Arterial Spin Labeling CBF Quantifier ([link](https://github.com/harbor-framework/terminal-bench-science/pull/142))
-- [TASK: Neuroscience] Quantitative T1/T2 mapping from multi-contrast MRI ([link](https://github.com/harbor-framework/terminal-bench-science/pull/1485))
-- [TASK: Neuroscience] Neuroimaging task qsm recon challenge 2.0 ([link](https://github.com/harbor-framework/terminal-bench-science/pull/33))
-- [TASK: life-science/neuroscience] Cross-scanner MRI Harmonization ([link](https://github.com/harbor-framework/terminal-bench-science/pull/999))
-- [TASK: Neuroscience] NAcc reward-anticipation confound resolution ([link](https://github.com/harbor-framework/terminal-bench-science/pull/721))
-- [TASK: life-science/neuroscience] Neuroimaging evidence audit ([link](https://github.com/harbor-framework/terminal-bench-science/pull/898))
-
-## Emergent Mind — tDCS
-
-- Appropriate tissue conductivities and their dependence on current and time in tDCS modeling ([link](https://www.emergentmind.com/open-problems/appropriate-tissue-conductivities-and-their-dynamics-in-tdcs))
-
-  Identify tissue conductivity values appropriate for direct-current head models, then measure how they evolve with applied current and exposure duration. Non-DC measurements and decreasing stimulation impedance make constant, purely resistive tissue assignments uncertain. Source paper: [Quasistatic approximation in neuromodulation, arXiv:2402.00486](https://arxiv.org/abs/2402.00486), section 3.4.
-
-The existing **Validity of Gabriel et al. tissue dielectric model below 10 Hz** entry under [neurotechnology](#emergent-mind--neurotechnology) is also relevant to low-frequency electrical-stimulation modeling and comes from the same paper; it is not duplicated here. Other returned coactivation, TMS, and Fourier-synthesis questions did not establish an additional tDCS-specific problem.
 
 ## Emergent Mind — Acoustic physics
 
@@ -316,15 +206,102 @@ These entries include an overarching question and several separately cataloged m
 
   Extend the existence and dynamics of breathers and fronts to higher-dimensional, periodically modulated lattices, including phononic media with wavenumber gaps.
 
-## TB-Science — tDCS
+## Emergent Mind — Broader neurotechnology
 
-No explicit tDCS task was found in the titles and bodies of the 944 proposals and 436 PRs in the inspected dashboard snapshot. Searches covered `tDCS`, `transcranial direct current`, `direct-current stimulation`, `transcranial electrical`, and `electrode montage`. This is a search result for that snapshot, not a claim that no such task exists elsewhere or will be added later.
+- Shared modeling across stimulation modalities ([link](https://www.emergentmind.com/open-problems/shared-modeling-across-neural-stimulation-modalities))
+
+  Determine how to train a shared neural stimulation response model on datasets that mix modalities, particularly when electrical stimulation and optogenetic stimulation produce qualitatively different artifact time courses.
+
+- Cause of post-training functional connectivity changes: SMA–M1 network stimulation versus M1-only stimulation ([link](https://www.emergentmind.com/open-problems/sma-m1-fc-change-cause-network-vs-m1-alone))
+
+  Determine whether the post-training differential change in resting-state EEG functional connectivity (imaginary part of coherence) between the left supplementary motor area (SMA-proper) and left primary motor cortex (M1) observed after reinforcement learning-based closed-loop EEG-triggered paired-pulse TMS arises specifically from paired stimulation of the SMA–M1 network (conditioning stimulus over SMA-proper preceding M1 stimulation by 6 ms) or whether equivalent connectivity changes can be induced by effective stimulation of M1 alone without SMA conditioning.
+
+- Long-term safety of optogenetic gene delivery and light exposure ([link](https://www.emergentmind.com/open-problems/long-term-effects-of-optogenetics-retroviral-opsin-light-exposure))
+
+  Determine the long-term effects on neurons of retroviral vector-mediated genome insertion, expression of non-human opsin proteins, and prolonged optical exposure used in optogenetic neuromodulation, in order to establish the safety and stability required for translation to human applications.
+
+- Overall efficiency of the proposed spatio-temporal Fourier synthesis methods ([link](https://www.emergentmind.com/open-problems/overall-efficiency-stfs-methods))
+
+  Determine the overall efficiency of the spatio-temporal Fourier synthesis deep-brain stimulation techniques that employ multiple electrode pairs with sinusoidal currents, including the capability to deliver effective stimulation to targeted deep-brain regions.
+
+- Optimal spike waveform shapes and timing for Fourier-synthesized deep-brain stimulation ([link](https://www.emergentmind.com/open-problems/optimal-spike-shapes-and-timing-stfs-dbs))
+
+  Determine the optimal spike waveform shapes and temporal timing parameters for non-invasive deep-brain stimulation generated via spatio-temporal Fourier synthesis using multiple electrode pairs driven by sinusoidal harmonics, with the goal of concentrating stimulus power into brief high-amplitude pulses while maintaining low skin sensation.
+
+- Efficacy of chirping harmonic frequencies for enhanced stimulation ([link](https://www.emergentmind.com/open-problems/efficacy-chirping-harmonics-stfs-dbs))
+
+  Ascertain whether linearly increasing (chirping) harmonic frequencies in the sinusoidal components used for spatio-temporal Fourier synthesis enhance the effectiveness of non-invasive deep-brain stimulation compared to non-chirped harmonics.
+
+- Effectiveness of noisy excitation using irrational frequency components ([link](https://www.emergentmind.com/open-problems/effectiveness-noisy-excitation-irrational-frequencies))
+
+  Determine whether quasi-periodic noisy excitation produced by combining sinusoidal components with irrational frequency values is more effective for non-invasive deep-brain stimulation via spatio-temporal Fourier synthesis than deterministic harmonic configurations.
+
+- Validity of Gabriel et al. tissue dielectric model below 10 Hz ([link](https://www.emergentmind.com/open-problems/validity-of-gabriel-model-below-10-hz))
+
+  Ascertain the validity of the Gabriel et al. parametric model for dielectric properties of biological tissues at frequencies below 10 Hz, which lie outside the experimental data range used for fitting, to ensure accurate selection of conductivity and permittivity for low-frequency neuromodulation waveforms.
+
+- Transferability of the EEG-based speech decoder to new participants ([link](https://www.emergentmind.com/open-problems/transferability-eeg-speech-decoder-across-participants))
+
+  Determine whether the EEG-based speech decoding system trained via CLIP alignment between EEG and pre-trained audio embeddings using 175 hours of overt speech data from a single healthy participant can be transferred to other participants, and quantify the amount of participant-specific data required to enable such transferability through fine-tuning or adaptation.
+
+- Validation of non-invasive EEG speech decoding in individuals with speech disabilities and attempted speech ([link](https://www.emergentmind.com/open-problems/validate-eeg-speech-decoding-in-speech-disabilities-and-attempted-speech))
+
+  Validate whether high-accuracy non-invasive EEG-based speech decoding, trained on overt speech from healthy individuals, can be achieved in individuals with speech disabilities, including using non-invasive recordings during attempted speech under data collection protocols analogous to those used for invasive measurements.
+
+- Effectiveness of single-model approaches for silent speech decoding under heterogeneous EEG/EMG electrode configurations and transfer to patients ([link](https://www.emergentmind.com/open-problems/effectiveness-heterogeneous-electrodes-silent-speech-decoding-and-transfer))
+
+  Determine the effectiveness of single-model deep neural network architectures that handle heterogeneous EEG and electromyography (EMG) electrode configurations for silent speech decoding tasks, and ascertain the efficacy of knowledge transfer from models trained on healthy individuals to patients with neurodegenerative diseases, when using non-invasive EEG/EMG signals.
+
+- Bridge laboratory BCI paradigms and embodied, fluid robotic interaction ([link](https://www.emergentmind.com/open-problems/bridge-bci-paradigms-and-embodied-fluid-robotic-interaction))
+
+  Develop EEG-based brain–computer interface control approaches that enable seamless, continuous, and intuitive interaction with mobile robots such as assistive robotic wheelchairs, thereby bridging the gap between laboratory-designed discrete BCI paradigms (including spontaneous motor imagery and evoked responses) and the embodied, fluid robotic control required for real-world navigation.
+
+- Improve post-decoding trajectory regulation and control smoothness in continuous BCI control ([link](https://www.emergentmind.com/open-problems/improve-post-decoding-trajectory-regulation-and-smoothness))
+
+  Develop and integrate post-decoding trajectory regulation mechanisms to enhance control smoothness for continuous pursuit motion control using the proposed Bayesian acceleration-level EEG decoder, addressing the identified open need for improved trajectory regulation and smoothness.
+
+- Real-time feasibility of online EEG-based intention decoding in mixed reality ([link](https://www.emergentmind.com/open-problems/online-eeg-intention-decoding-real-time-latency-constraints))
+
+  Determine whether the computational requirements and end-to-end latency of online, real-time classification of user intention (Select versus Observe) from anticipatory EEG activity using deep learning models are compatible with mixed reality interaction, including the streaming preprocessing and inference necessary for immediate applicability in live systems.
+
+- Establish zero-shot generalization without target-patient iEEG ([link](https://www.emergentmind.com/open-problems/zero-shot-generalization-without-target-patient-ieeg))
+
+  Determine what intracranial events, features, or waveforms generalize across patients and sites without using target-patient intracranial EEG for model fitting, calibration, contact selection, or hyperparameter choice.
+
+- Quantify the scalp-conditioned information increment ([link](https://www.emergentmind.com/open-problems/quantify-scalp-conditioned-information-increment))
+
+  Determine how much information about a specified intracranial target is contributed by the concurrent scalp EEG segment beyond non-concurrent information such as anatomy, domain, task context, and permissible target-patient adaptation data.
+
+- External and Multi-Center Validation of Graph Topology Choices ([link](https://www.emergentmind.com/open-problems/external-multi-center-validation-graph-topology-ez-localization))
+
+  Establish the external cross-dataset and multi-center validity of graph-topology choices for resting-state stereo-electroencephalography epileptogenic-zone localization, including their robustness to differences in electrode layouts and labeling practices.
+
+- Estimating cross-modal transfer functions without source ground truth ([link](https://www.emergentmind.com/open-problems/estimate-cross-modal-transfer-functions-without-source-ground-truth))
+
+  Develop methods to estimate the cross-modal transfer-function matrices required for temporal geometric eigenmode source localisation from experimental scalp EEG without direct knowledge of the underlying neural source activity.
+
+- Physiological basis of performance degradation in living neural reservoirs ([link](https://www.emergentmind.com/open-problems/determine-physiological-basis-of-performance-degradation-in-living-neural-reservoirs))
+
+  Determine the physiological mechanisms responsible for the post‑training degradation of classification accuracy in reservoir computing experiments using optogenetically stimulated motoneuron cultures on microelectrode arrays, specifically the drift in network dynamics that collapses initially separable latent trajectories into poorly separable clusters within a few hours after training.
+
+### tDCS
+
+- Appropriate tissue conductivities and their dependence on current and time in tDCS modeling ([link](https://www.emergentmind.com/open-problems/appropriate-tissue-conductivities-and-their-dynamics-in-tdcs))
+
+  Identify tissue conductivity values appropriate for direct-current head models, then measure how they evolve with applied current and exposure duration. Non-DC measurements and decreasing stimulation impedance make constant, purely resistive tissue assignments uncertain. Source paper: [Quasistatic approximation in neuromodulation, arXiv:2402.00486](https://arxiv.org/abs/2402.00486), section 3.4.
+
+The existing **Validity of Gabriel et al. tissue dielectric model below 10 Hz** entry above in this broader-neurotechnology section is also relevant to low-frequency electrical-stimulation modeling and comes from the same paper; it is not duplicated here. Other returned coactivation, TMS, and Fourier-synthesis questions did not establish an additional tDCS-specific problem.
+
+## TB-Science — Focused ultrasound and related ultrasound
+
+- [TASK: Applied Mathematics] Escaping Cycle Skipping in Frequency-Domain Full-Waveform Inversion Without a Low-Frequency Backbone ([link](https://github.com/harbor-framework/terminal-bench-science/pull/997))
+- Add task: usct-soundspeed-fwi (viscoacoustic USCT full-waveform inversion) ([link](https://github.com/harbor-framework/terminal-bench-science/pull/387))
 
 ## TB-Science — Acoustic physics
 
 Statuses below are from the dashboard snapshot generated on **2026-09-05 at 08:13:57 UTC**. A closed proposal marked approved can have an implemented task; proposal approval and PR merge are different states. Where a proposal and PR describe the same task, they appear together.
 
-The existing [ultrasound section](#tb-science--ultrasound) already includes USCT sound-speed inversion (PR #387, proposal #386) and cycle-skipping-resistant frequency-domain inversion (PR #997, proposal #757); both PRs were open in this snapshot.
+The existing [focused-ultrasound and related-ultrasound section](#tb-science--focused-ultrasound-and-related-ultrasound) already includes USCT sound-speed inversion (PR #387, proposal #386) and cycle-skipping-resistant frequency-domain inversion (PR #997, proposal #757); both PRs were open in this snapshot.
 
 ### Guided waves, seismic inversion, and phonon scattering
 
@@ -403,6 +380,28 @@ These broaden the collection beyond conventional fluid acoustics; the particular
 - Two-species Vlasov–Poisson solver validation — **approved proposal; closed, unmerged linked PR** ([proposal #914](https://github.com/harbor-framework/terminal-bench-science/discussions/914); [PR #920](https://github.com/harbor-framework/terminal-bench-science/pull/920))
 
   The proposal includes extracting ion-acoustic oscillation frequencies and damping after a fast Langmuir transient, then checking the kinetic solver against dispersion theory. Connection: plasma acoustic modes. The linked PR evolved into a broader multi-regime solver and plasma-echo task.
+
+## TB-Science — Broader neurotechnology
+
+- Closed-loop control of non-stationary Parkinsonian beta oscillations for deep brain stimulation ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/634))
+- [WIP] [TASK: Electrical Engineering] neuralink-network-soc — chained ASIC NoC and thermal envelope ([link](https://github.com/harbor-framework/terminal-bench-science/pull/1515))
+- [TASK: Neuroscience] EEG P300 ERP Recovery ([link](https://github.com/harbor-framework/terminal-bench-science/pull/282))
+- [TASK: Neuroscience] Frontotemporal LFP bursting metrics for object working memory (OpenNeuro ds006136) ([link](https://github.com/harbor-framework/terminal-bench-science/pull/638))
+- Blind estimation of neural signal complexity from EEG ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/283))
+- Estimating contextual semantic contributions to continuous-speech EEG under acoustic controls ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/1689))
+- Full MEG pipeline from raw recording to cortical source dynamics ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/104))
+- Neurodata Without Boredom: Benchmarking Agentic AI for Data Reuse ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/172))
+- Linear dynamic causal modeling with closed-form inversion and Bayesian model comparison via synthetic fixture verification ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/118))
+- [TASK: Life Sciences] Mixed-Cohort pCASL Arterial Spin Labeling CBF Quantifier ([link](https://github.com/harbor-framework/terminal-bench-science/pull/142))
+- [TASK: Neuroscience] Quantitative T1/T2 mapping from multi-contrast MRI ([link](https://github.com/harbor-framework/terminal-bench-science/pull/1485))
+- [TASK: Neuroscience] Neuroimaging task qsm recon challenge 2.0 ([link](https://github.com/harbor-framework/terminal-bench-science/pull/33))
+- [TASK: life-science/neuroscience] Cross-scanner MRI Harmonization ([link](https://github.com/harbor-framework/terminal-bench-science/pull/999))
+- [TASK: Neuroscience] NAcc reward-anticipation confound resolution ([link](https://github.com/harbor-framework/terminal-bench-science/pull/721))
+- [TASK: life-science/neuroscience] Neuroimaging evidence audit ([link](https://github.com/harbor-framework/terminal-bench-science/pull/898))
+
+### tDCS coverage
+
+No explicit tDCS task was found in the titles and bodies of the 944 proposals and 436 PRs in the inspected dashboard snapshot. Searches covered `tDCS`, `transcranial direct current`, `direct-current stimulation`, `transcranial electrical`, and `electrode montage`. This is a search result for that snapshot, not a claim that no such task exists elsewhere or will be added later.
 
 ## Search coverage and provenance
 
