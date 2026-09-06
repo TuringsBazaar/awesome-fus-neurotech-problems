@@ -1,6 +1,7 @@
 # Awesome FUS and Neurotech Problems
 
-Scanned on 2026-09-05 from 1) Emergent Mind, which lists open research questions, and 2) Terminal Bench Science, being benchmark tasks or proposals with submission statuses
+This repo contains problems in FUS, acoustic physics, and wider neurotech scanned from 1) Emergent Mind, which lists open research questions, and 2) Terminal Bench Science, being benchmark tasks or proposals with submission statuses.
+
 
 ## Emergent Mind — Focused ultrasound
 
