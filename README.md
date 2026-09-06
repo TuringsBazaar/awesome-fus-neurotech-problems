@@ -1,6 +1,6 @@
-# Awesome FUS & Neurotech Problems
+# Awesome FUS and Neurotech Problems
 
-Expanded on 2026-09-05. The original FUS and neurotechnology entries are followed by additional tDCS and acoustic-physics findings. New descriptions are paraphrased from the linked sources. Emergent Mind entries are cataloged research questions; TB-Science entries are benchmark tasks or proposals, with submission status recorded separately from scientific relevance.
+Scanned on 2026-09-05 from 1) Emergent Mind, which lists open research questions, and 2) Terminal Bench Science, being benchmark tasks or proposals with submission statuses
 
 ## Emergent Mind — Focused ultrasound
 
