@@ -1,30 +1,39 @@
 # FUS and adjacent neurotech problems
 
-A curated collection of focused ultrasound (FUS) problems, numerics and wave physics for transcranial modeling, and broader neurotechnology. Sources are Emergent Mind open research questions and Terminal Bench Science benchmark tasks and proposals.
+Focused ultrasound (FUS) research problems, numerics and wave physics for transcranial modeling, and broader neurotechnology mined from Emergent Mind--open research questions, problems distilled from the limitations and future work sections of primary literature--Terminal Bench Science benchmark tasks.
 
 ## Emergent Mind — Focused ultrasound
 
-- Define appropriate neuromodulation dose parameters for TUS ([link](https://www.emergentmind.com/open-problems/define-appropriate-tus-dose-parameters))
+- Design standardized neuromodulation dose parameters for TUS ([link](https://www.emergentmind.com/open-problems/define-appropriate-tus-dose-parameters))
 
   Develop and validate appropriate neuromodulation dose parameters for transcranial ultrasound stimulation that quantitatively capture exposure–response relationships and can be adopted for standardized reporting, given that the mechanisms by which ultrasound affects brain function are not yet sufficiently understood to define such parameters.
 
-- Determine the appropriate time-averaging window for spatial-peak time-average intensity (I_spta) in TUS ([link](https://www.emergentmind.com/open-problems/determine-i-spta-averaging-interval-for-tus))
+- Define the fixed and variable parameters used to in TUS pulse trains to eliminate ambiguity and used for calculating spatial-peak time-average intensity (I_spta) ([link](https://www.emergentmind.com/open-problems/determine-i-spta-averaging-interval-for-tus))
 
   Determine, based on characteristic diffusion times relevant to transcranial ultrasound stimulation, the maximum continuous no-stimulation interval that should be included when computing the spatial-peak time-average intensity (I_spta) for transcranial ultrasound stimulation protocols, to remove ambiguity in standardised reporting of time-averaged intensity.
 
-- Determine exact optimal parameters of 3D-printed holographic acoustic lenses for transcranial FUS ([link](https://www.emergentmind.com/open-problems/determine-exact-optimal-parameters-3d-printed-holographic-acoustic-lenses))
+- Optimize transducer geometry and minimal number of elements for a given target
+
+- Optimize parameters of 3D-printed holographic acoustic lenses for transcranial FUS from the established interval of desirable values ([link](https://www.emergentmind.com/open-problems/determine-exact-optimal-parameters-3d-printed-holographic-acoustic-lenses))
 
   Determine the exact physical parameter values that define the optimal 3D‑printed holographic acoustic lens for correcting transcranial focused ultrasound aberrations using single‑element transducers, specifically quantifying the polymer p‑wave speed and the resulting lens thickness under a given 3D‑printer voxel size and typical transducer–target configurations, beyond the current trend‑based interval of desirable thicknesses evidenced by simulations and experiments.
 
-- Mechanisms underlying PRF-dependent lesion growth in HCT histotripsy ([link](https://www.emergentmind.com/open-problems/mechanisms-prf-dependent-lesion-growth-hct-histotripsy))
+- How do the effects of focused ultrasound stimulation mathematically decay with time?
 
-  Establish the mechanistic basis for why lesions did not grow at 100 Hz but continued to expand at 1 kHz during 1–10 second treatments using 10 µs pulses inside a hollow cylindrical transducer lumen, including whether bubble-memory effects and PRF-dependent modifications to the lateral pressure field drive enhanced off-axis erosion at higher PRF.
+- How can FUS studies place fixed transducers onto people's heads more efficiently?
+
+- How does the evolving bubble population modify the unusual acoustic field inside a hollow cylindrical transducer? Does making a liquid channel inside the clot actually make the clot easier to suck into the catheter? ([link](https://www.emergentmind.com/open-problems/mechanisms-prf-dependent-lesion-growth-hct-histotripsy))
+
+  Future experiments need to determine whether residual bubbles suppress,
+  redirect, or extend cavitation, and how that depends on pulse spacing, pulse length, bubble
+  lifetime, and lesion geometry. This would enable designed pulse sequences—perhaps bursts
+  separated by pauses—instead of simply using a constant pulse-repetition frequency.
 
 - Cavitation/bubble-driven modification of standing-wave fields in HCT lumens ([link](https://www.emergentmind.com/open-problems/cavitation-bubble-modification-standing-wave-hct-lumens))
 
   Investigate how cavitation clouds and residual bubbles modify the constructive-interference standing-wave pressure distribution within the lumen of a radially polarized hollow cylindrical transducer operated near its thickness resonance, including the roles of reflections, attenuation, and emissions from the cloud on subsequent pulse propagation and pressure field evolution.
 
-- Degree of pulse nonlinearity for 10 µs HCT pulses ([link](https://www.emergentmind.com/open-problems/degree-of-pulse-nonlinearity-10us-hct-pulses))
+- A perfectly linear acoustic pulse is approximately sinusoidal. At high pressure sound propagation is no longer linear. Quantify the degree of pulse nonlinearity for 10 µs HCT pulses ([link](https://www.emergentmind.com/open-problems/degree-of-pulse-nonlinearity-10us-hct-pulses))
 
   Determine the degree of acoustic pulse nonlinearity for 10 µs, 6.1 MHz pulses generated by the radially polarized hollow cylindrical piezoelectric transducer (2.5/3.3 mm inner/outer diameter, 2.5 mm length) operated in the thickness-mode bandwidth, to quantitatively establish their placement within the shock scattering histotripsy classification.
 
@@ -36,15 +45,67 @@ A curated collection of focused ultrasound (FUS) problems, numerics and wave phy
 
   Determine an optimal quantitative mapping from X-ray computed tomography Hounsfield units to the adult human skull’s compressional and shear wave speeds to enable heterogeneous elastic skull models in transcranial photoacoustic computed tomography, with particular emphasis on accurately estimating the shear wave speed.
 
-- Account for scalp-generated photoacoustic signals and skull reflections that corrupt cortical signals ([link](https://www.emergentmind.com/open-problems/accounting-for-scalp-photoacoustic-reflections-in-transcranial-pact))
+- Develop a transcranial photoacoustic computed tomography reconstruction framework that models and accounts for photoacoustic signals generated outside the skull (including hair follicles and melanin in the scalp), their reflections from the skull, and the resulting deterministic background to prevent corruption of intracranial cortical signals. ([link](https://www.emergentmind.com/open-problems/accounting-for-scalp-photoacoustic-reflections-in-transcranial-pact))
 
-  Develop a transcranial photoacoustic computed tomography reconstruction framework that models and accounts for photoacoustic signals generated outside the skull (including hair follicles and melanin in the scalp), their reflections from the skull, and the resulting deterministic background to prevent corruption of intracranial cortical signals.
+## Literature: FUS problems
+
+- Extend transcranial-ultrasound benchmarks from idealized compressional models to clinically meaningful skull models ([link](https://pubs.aip.org/asa/jasa/article/152/2/1003/2838380/Benchmark-problems-for-transcranial-ultrasound))
+
+  Add elastic mode conversion, CT-derived heterogeneous material properties, and experimentally measured transducer fields to the existing linear 500 kHz benchmarks. Define task-specific acceptance limits for phase correction, focal position and size, intracranial pressure, skull heating, and full-field error, then compare accuracy–runtime trade-offs across solvers. The published benchmark establishes solver agreement when inputs are fixed; it does not benchmark nonlinear propagation, cavitation, histotripsy, or bubble dynamics.
+
+- Validate fast learned tFUS field predictors beyond their simulation generators ([link](https://arxiv.org/abs/2608.01839); [link](https://pubmed.ncbi.nlm.nih.gov/41474058/))
+
+  Train and test on substantially more independent skulls, transducer types, frequencies, positions, and acquisition protocols; evaluate arbitrary-resolution three-dimensional output where supported; and compare predictions with hydrophone, phantom, cadaver, or in vivo measurements containing realistic noise and model mismatch. The central question is when a millisecond-scale surrogate can be trusted on a new patient rather than merely reproducing its numerical training solver.
+
+- Make transcranial MR-ARFI phase correction fast and dose-efficient ([link](https://pubmed.ncbi.nlm.nih.gov/39842847/))
+
+  Recover useful element-wise or low-dimensional phase corrections within a clinically acceptable scan time while maximizing displacement signal-to-noise ratio and limiting the number of sonications and skull heating. Jointly optimize the motion-encoding gradients, ultrasound timing, element grouping or basis, reconstruction, and uncertainty, and validate the correction against focal-pressure measurements and CT-based planning.
+
+- Optimize single-element transducer placement against the full target geometry and placement uncertainty ([link](https://www.mdpi.com/2306-5354/11/11/1144))
+
+  Extend SCOUT beyond peak pressure and focal volume by incorporating the three-dimensional focal shape and orientation, diseased-tissue geometry, sensitive off-target structures, coupling constraints, and robot or operator placement error. Establish numerical convergence, replace the fixed 20-degree search with an efficient adaptive fine search, and validate the complete planning-and-placement workflow across multiple skulls rather than only a head phantom.
+
+- Reduce patient-scale three-dimensional transcranial full-waveform inversion from hours to minutes and validate the recovered acoustic maps ([link](https://www.nature.com/articles/s41746-020-0240-8))
+
+  Develop a robust, cycle-skipping-resistant three-dimensional acquisition and inversion pipeline that approaches the proposed sub-10-minute turnaround instead of the reported approximately 32 hours. Test it on clinical in vivo data, quantify uncertainty in skull and brain sound-speed maps, and determine whether jointly recovering density and attenuation improves subsequent FUS targeting enough to justify the added computation.
+
+- Resolve the direct cellular mechanism of low-intensity ultrasound neuromodulation ([link](https://www.cell.com/neuron/fulltext/S0896-6273(20)30703-0))
+
+  Separate membrane mechanics, mechanosensitive ion channels, cavitation, thermal effects, neuronal responses, glial responses, and indirect sensory pathways using experiments with matched acoustic exposure and decisive negative controls. The result should predict response polarity and magnitude across pulse parameters, cell types, brain states, species, and anatomical targets rather than only explain results retrospectively.
+
+- Quantify and control acoustoelectric contributions to nominal ultrasound neuromodulation ([link](https://www.nature.com/articles/s41467-026-73826-2))
+
+  Isolate the acoustic and electric contributions to ultrasound-evoked responses in vivo; measure their dependence on grounding, transducer geometry, drive electronics, endogenous fields, and electrically insulating layers; and confirm effects with direct spike recordings. Demonstrate spatially localized stimulation without mouse-head standing-wave ambiguity and optimize human-compatible waveforms under skull-heating, attenuation, and aberration constraints.
+
+- Map amygdala-TUS effects over acoustic dose, neural state, and measured in vivo exposure ([link](https://www.science.org/doi/10.1126/sciadv.aea8233))
+
+  Systematically vary pulsing parameters and stimulation timing while measuring delivered exposure and concurrent circuit activity, testing blinding and sensory matching as part of the protocol. A particularly translational experiment is whether stimulation during retrieval or reconsolidation can accelerate extinction of already-established threat memories, with retention and relapse assessed after the immediate laboratory session.
+
+- Establish the clinical efficacy and durability of repeated amygdala tFUS in blinded randomized trials ([link](https://pubmed.ncbi.nlm.nih.gov/40275098/))
+
+  Follow the initial target-engagement and unblinded single-arm treatment results with adequately powered, double-blind, sham-controlled trials. Quantify dose–response, durability, adverse events, masking integrity, and whether baseline circuit or acoustic-delivery measures identify responders across mood and anxiety-related disorders.
+
+- Optimize acoustically activatable liposomes for high on-target release with negligible baseline leakage ([link](https://www.nature.com/articles/s41565-025-01990-5))
+
+  Determine the nonthermal, non-inertial-cavitation release mechanism; optimize the trade-off between storage and circulation stability and ultrasound responsiveness; and map release as a function of frequency, pressure, duty cycle, drug chemistry, and tissue path. Translation requires pharmacokinetics, repeated-dose safety, transcranial targeting accuracy, and controlled human studies showing that local benefit exceeds systemic exposure.
+
+- Recover spatially varying skull-aberration laws directly from ultrafast vascular dynamics ([link](https://arxiv.org/html/2410.14499v1))
+
+  Replace the prior high-dimensional static reflection-matrix acquisition and spatial isoplanatic averaging with time averaging of decorrelating vascular speckle. Recover lateral as well as depth-dependent aberrations, exploit or suppress multiple skull reverberations so tissue immediately below the skull can be imaged, and test the method in recent-stroke patients. The same locally measured transmission operators could also inform adaptive FUS focusing.
+
+- Achieve focal, safe transcranial acoustoelectric neural recording ([link](https://www.nature.com/articles/s44172-026-00598-4))
+
+  Maximize demodulated neural signal-to-noise ratio through the skull while correcting phase aberration and standing waves, synchronizing generation and recording clocks, and suppressing carrier and DC-offset artifacts. Demonstrate focal specificity in a larger animal or at a shorter wavelength, then find a pulsed or otherwise thermally acceptable waveform that preserves real-time signal recovery within human safety limits.
+
+- Engineer brain-compatible genetically encoded ultrasonic reporters of fast cellular activity ([link](https://www.cell.com/neuron/fulltext/S0896-6273(20)30703-0); [link](https://www.biorxiv.org/content/10.1101/2023.11.09.566364v1))
+
+  Improve gas-vesicle reporter expression, tolerability, sensitivity, dynamic range, and kinetics sufficiently to measure endogenous neural calcium transients rather than only strong pharmacologically induced signals. Establish how nonlinear reporter signals can be separated from tissue and vascular backgrounds through intact skull, and extend the reporter design to additional molecular signals relevant to monitoring FUS effects.
 
 ## Emergent Mind — Numerics and wave physics for transcranial modeling
 
 These seven problems complement the [focused-ultrasound entries](#emergent-mind--focused-ultrasound) through heterogeneous wave solvers, skull-property modeling, and inversion. Problems originating in seismic imaging or general scattering are retained for those shared methods.
 
-### Heterogeneous wave propagation and inversion
+### Heterogeneous wave propagation/inversion
 
 - Convergence of Waveholtz for variable wave speeds ([link](https://www.emergentmind.com/open-problems/convergence-of-waveholtz-for-variable-wave-speeds))
 
@@ -157,7 +218,6 @@ These seven problems complement the [focused-ultrasound entries](#emergent-mind-
 
   Identify tissue conductivity values appropriate for direct-current head models, then measure how they evolve with applied current and exposure duration. Non-DC measurements and decreasing stimulation impedance make constant, purely resistive tissue assignments uncertain. Source paper: [Quasistatic approximation in neuromodulation, arXiv:2402.00486](https://arxiv.org/abs/2402.00486), section 3.4.
 
-The **Validity of Gabriel et al. tissue dielectric model below 10 Hz** entry above addresses a related modeling question from the same paper.
 
 ## TB-Science — Focused ultrasound and related ultrasound
 
