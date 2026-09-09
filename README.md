@@ -12,15 +12,10 @@ Focused ultrasound (FUS) research problems, numerics and wave physics for transc
 
   Determine, based on characteristic diffusion times relevant to transcranial ultrasound stimulation, the maximum continuous no-stimulation interval that should be included when computing the spatial-peak time-average intensity (I_spta) for transcranial ultrasound stimulation protocols, to remove ambiguity in standardised reporting of time-averaged intensity.
 
-- Optimize transducer geometry and minimal number of elements for a given target
-
 - Optimize parameters of 3D-printed holographic acoustic lenses for transcranial FUS from the established interval of desirable values ([link](https://www.emergentmind.com/open-problems/determine-exact-optimal-parameters-3d-printed-holographic-acoustic-lenses))
 
   Determine the exact physical parameter values that define the optimal 3D‑printed holographic acoustic lens for correcting transcranial focused ultrasound aberrations using single‑element transducers, specifically quantifying the polymer p‑wave speed and the resulting lens thickness under a given 3D‑printer voxel size and typical transducer–target configurations, beyond the current trend‑based interval of desirable thicknesses evidenced by simulations and experiments.
 
-- How do the effects of focused ultrasound stimulation mathematically decay with time?
-
-- How can FUS studies place fixed transducers onto people's heads more efficiently?
 
 - How does the evolving bubble population modify the unusual acoustic field inside a hollow cylindrical transducer? Does making a liquid channel inside the clot actually make the clot easier to suck into the catheter? ([link](https://www.emergentmind.com/open-problems/mechanisms-prf-dependent-lesion-growth-hct-histotripsy))
 
@@ -61,7 +56,7 @@ Focused ultrasound (FUS) research problems, numerics and wave physics for transc
 
   Recover useful element-wise or low-dimensional phase corrections within a clinically acceptable scan time while maximizing displacement signal-to-noise ratio and limiting the number of sonications and skull heating. Jointly optimize the motion-encoding gradients, ultrasound timing, element grouping or basis, reconstruction, and uncertainty, and validate the correction against focal-pressure measurements and CT-based planning.
 
-- Optimize single-element transducer placement against the full target geometry and placement uncertainty ([link](https://www.mdpi.com/2306-5354/11/11/1144))
+- Optimize single-element transducer placement against the full target geometry and placement uncertainty, and transducer geometry and minimal number of elements for a given target ([link](https://www.mdpi.com/2306-5354/11/11/1144))
 
   Extend SCOUT beyond peak pressure and focal volume by incorporating the three-dimensional focal shape and orientation, diseased-tissue geometry, sensitive off-target structures, coupling constraints, and robot or operator placement error. Establish numerical convergence, replace the fixed 20-degree search with an efficient adaptive fine search, and validate the complete planning-and-placement workflow across multiple skulls rather than only a head phantom.
 
@@ -100,6 +95,11 @@ Focused ultrasound (FUS) research problems, numerics and wave physics for transc
 - Engineer brain-compatible genetically encoded ultrasonic reporters of fast cellular activity ([link](https://www.cell.com/neuron/fulltext/S0896-6273(20)30703-0); [link](https://www.biorxiv.org/content/10.1101/2023.11.09.566364v1))
 
   Improve gas-vesicle reporter expression, tolerability, sensitivity, dynamic range, and kinetics sufficiently to measure endogenous neural calcium transients rather than only strong pharmacologically induced signals. Establish how nonlinear reporter signals can be separated from tissue and vascular backgrounds through intact skull, and extend the reporter design to additional molecular signals relevant to monitoring FUS effects.
+
+- How do the effects of focused ultrasound stimulation mathematically decay with time?
+
+  
+- How can FUS studies place fixed transducers onto individual heads more efficiently?
 
 ## Emergent Mind — Numerics and wave physics for transcranial modeling
 
