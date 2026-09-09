@@ -1,4 +1,4 @@
-# Awesome FUS and Neurotech Problems
+# FUS and adjacent neurotech problems
 
 A curated collection of focused ultrasound (FUS) problems, numerics and wave physics for transcranial modeling, and broader neurotechnology. Sources are Emergent Mind open research questions and Terminal Bench Science benchmark tasks and proposals.
 
