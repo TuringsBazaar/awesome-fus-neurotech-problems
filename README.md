@@ -1,6 +1,6 @@
 # Awesome FUS and Neurotech Problems
 
-This repo contains problems in FUS, acoustic physics, and wider neurotech scanned from 1) Emergent Mind, which lists open research questions, and 2) Terminal Bench Science, being benchmark tasks or proposals with submission statuses.
+A curated collection of focused ultrasound (FUS) problems, numerics and wave physics for transcranial modeling, and broader neurotechnology. Sources are Emergent Mind open research questions and Terminal Bench Science benchmark tasks and proposals.
 
 ## Emergent Mind — Focused ultrasound
 
@@ -40,23 +40,33 @@ This repo contains problems in FUS, acoustic physics, and wider neurotech scanne
 
   Develop a transcranial photoacoustic computed tomography reconstruction framework that models and accounts for photoacoustic signals generated outside the skull (including hair follicles and melanin in the scalp), their reflections from the skull, and the resulting deterministic background to prevent corruption of intracranial cortical signals.
 
-## Emergent Mind — Acoustic physics
+## Emergent Mind — Numerics and wave physics for transcranial modeling
 
-The existing [focused-ultrasound entries](#emergent-mind--focused-ultrasound) already cover acoustic lenses, skull wave speeds, photoacoustic reflections, histotripsy nonlinearity, and bubble-modified standing waves. The following are additional catalog entries.
+These seven problems complement the [focused-ultrasound entries](#emergent-mind--focused-ultrasound) through heterogeneous wave solvers, skull-property modeling, and inversion. Problems originating in seismic imaging or general scattering are retained for those shared methods.
 
-### Wave propagation, scattering, and numerical methods
-
-- Stability and instability conditions for stationary acoustic WKE solutions ([link](https://www.emergentmind.com/open-problems/stability-instability-stationary-acoustic-wke))
-
-  Establish when small disturbances of equilibrium and constant-flux acoustic turbulence spectra grow or decay in two and three dimensions, including the relevant instability thresholds.
-
-- Next-to-leading-order anisotropic stability analysis in acoustic WKE ([link](https://www.emergentmind.com/open-problems/nlo-anisotropic-stability-acoustic-wke))
-
-  Extend acoustic turbulence stability theory to anisotropic perturbations when dispersion destroys the homogeneity required by existing analytic methods. This is a distinct extension of the preceding stability question.
+### Heterogeneous wave propagation and inversion
 
 - Convergence of Waveholtz for variable wave speeds ([link](https://www.emergentmind.com/open-problems/convergence-of-waveholtz-for-variable-wave-speeds))
 
   Prove convergence of the Waveholtz iteration in heterogeneous media and specify the assumptions on spatially varying sound speed and solution spaces needed for the proof.
+
+- Mesh-distortion threshold for numerical noise ([link](https://www.emergentmind.com/open-problems/determine-mesh-distortion-threshold-for-numerical-noise))
+
+  Quantify how much hexahedral mesh deformation can be tolerated before coupled elastic–acoustic spectral-element simulations develop substantial numerical noise, using the scaled Jacobian as the distortion measure.
+
+- Rapid, high-resolution 3D seismic wavefield prediction ([link](https://www.emergentmind.com/open-problems/best-approach-rapid-high-resolution-3d-seismic-wavefields))
+
+  Benchmark reduced-order and machine-learning approaches for realistic heterogeneous three-dimensional seismic media, balancing prediction speed against resolution and fidelity to topography, attenuation, and site effects.
+
+- Determine the relation between compressional attenuation and wavespeed ([link](https://www.emergentmind.com/open-problems/relation-between-compressional-attenuation-and-wavespeed))
+
+  Explain whether the residual pressure scaling of compressional-wave attenuation is tied to wave speed, and why shear-wave attenuation does not exhibit an analogous relationship in the reported data.
+
+- Explicit analytical expression for the multiparameter LSRTM Hessian ([link](https://www.emergentmind.com/open-problems/explicit-multiparameter-lsrtm-hessian))
+
+  Derive the complete imaging Hessian for acoustic least-squares reverse-time migration, including velocity–impedance cross-couplings, so that deconvolution need not depend on interpolated point-spread-function samples.
+
+### Boundary-integral solvers for 3D scattering
 
 - Low-rank structure for interactions between Fourier indices ([link](https://www.emergentmind.com/open-problems/low-rank-structure-between-fourier-indices))
 
@@ -66,145 +76,13 @@ The existing [focused-ultrasound entries](#emergent-mind--focused-ultrasound) al
 
   Construct efficient, accurate quadrature for the hypersingular operator in three-dimensional acoustic scattering, extending a discretization framework developed for less singular operators.
 
-- Dimension of null and defect subspaces for higher-order s-points ([link](https://www.emergentmind.com/open-problems/dimension-null-defect-subspaces-higher-order-s-points))
-
-  Determine the sizes of the null-control and unreachable-state spaces associated with higher-order s-points in a three-dimensional acoustic scattering model with a compactly supported potential.
-
-- Mesh-distortion threshold for numerical noise ([link](https://www.emergentmind.com/open-problems/determine-mesh-distortion-threshold-for-numerical-noise))
-
-  Quantify how much hexahedral mesh deformation can be tolerated before coupled elastic–acoustic spectral-element simulations develop substantial numerical noise, using the scaled Jacobian as the distortion measure.
-
-- Explicit analytical expression for the multiparameter LSRTM Hessian ([link](https://www.emergentmind.com/open-problems/explicit-multiparameter-lsrtm-hessian))
-
-  Derive the complete imaging Hessian for acoustic least-squares reverse-time migration, including velocity–impedance cross-couplings, so that deconvolution need not depend on interpolated point-spread-function samples.
-
-- Determine the relation between compressional attenuation and wavespeed ([link](https://www.emergentmind.com/open-problems/relation-between-compressional-attenuation-and-wavespeed))
-
-  Explain whether the residual pressure scaling of compressional-wave attenuation is tied to wave speed, and why shear-wave attenuation does not exhibit an analogous relationship in the reported data.
-
-- Clarify the relationship between Lighthill-type sound and perceived sound ([link](https://www.emergentmind.com/open-problems/clarify-lighthill-type-sound-and-perceived-sound))
-
-  Establish how quantities predicted by Lighthill's acoustic analogy correspond to the sound an observer actually hears, clarifying the physical interpretation of aeroacoustic calculations.
-
-### Bubble acoustics and temperature-dependent sound
-
-These entries include an overarching question and several separately cataloged mechanistic hypotheses about the same pouring-water phenomenon.
-
-- Determine the physical mechanisms behind hot-versus-cold pouring sound differences ([link](https://www.emergentmind.com/open-problems/determine-physical-mechanisms-of-hot-vs-cold-pouring-sounds))
-
-  Identify the processes responsible for the different acoustic signatures produced when pouring water at different temperatures.
-
-- Minnaert resonance explanation for hot-versus-cold pouring sounds ([link](https://www.emergentmind.com/open-problems/minnaert-resonance-hypothesis-for-hot-vs-cold-pouring))
-
-  Test whether larger entrained bubbles in hot water produce lower resonance frequencies and account for the audible temperature difference.
-
-- Temperature-induced change in bubble-size distribution as the cause of sound differences ([link](https://www.emergentmind.com/open-problems/temperature-effect-on-entrained-bubble-size-distribution))
-
-  Measure whether hotter pouring water entrains more large bubbles and whether the resulting size distribution explains the change in sound.
-
-- Viscosity–turbulence mechanism for larger bubbles in hot water ([link](https://www.emergentmind.com/open-problems/viscosity-driven-turbulence-mechanism-for-larger-bubbles))
-
-  Test the proposed causal chain from reduced viscosity to stronger jet turbulence and larger entrained bubbles.
-
-- Cause of decreased bubble lifetime in the hot chocolate/coffee effect ([link](https://www.emergentmind.com/open-problems/cause-of-decreased-bubble-lifetime-in-hot-chocolate-coffee-effect))
-
-  Explain why bubbles persist for less time over repeated cup-tapping experiments, including whether depletion of surface foam changes bubble retention and the associated acoustic effect.
-
-- Higher-order validity of the bubble–Fresnel–relativity equivalence ([link](https://www.emergentmind.com/open-problems/higher-order-validity-of-bubble-fresnel-relativity-equivalence))
-
-  Determine whether a first-order mathematical correspondence between bubbly-liquid acoustics, Fresnel drag, and velocity addition survives at higher orders in drift speed relative to wave speed.
-
-### Acoustic resonators and material interactions
-
-- High figure of merit for acoustic resonators at tens to hundreds of GHz ([link](https://www.emergentmind.com/open-problems/high-figure-of-merit-acoustic-resonators-tens-hundreds-ghz))
-
-  Improve the coupling–quality product k²Q of electrically driven thin-film resonators at very high frequencies despite weaker high-order-mode coupling, film defects, and surface damping.
-
-- Unified explanation of acoustoelectric current in charge-density-wave materials ([link](https://www.emergentmind.com/open-problems/unified-model-acoustoelectric-current-cdw-materials))
-
-  Build a theory explaining how both temperature and surface-acoustic-wave propagation direction control the measured acoustoelectric current in charge-density-wave systems.
-
-- Develop lattice-dynamics theory with external magnetic field for chiral crystals ([link](https://www.emergentmind.com/open-problems/develop-lattice-dynamics-with-magnetic-field-for-chiral-crystals))
-
-  Model magnetic-field-dependent lattice dynamics in quartz and related crystals to reproduce acoustic magnetochiral anisotropy, including opposite responses of longitudinal and transverse modes.
-
-- Applicability of the macroscopic Becquerel-type model to chiral molecular crystals ([link](https://www.emergentmind.com/open-problems/applicability-of-becquerel-model-to-chiral-molecular-crystals))
-
-  Test whether a macroscopic magnetochiral model predicts ultrasound propagation through diamagnetic molecular crystals when molecular electronic and vibrational chirality also contribute.
-
-- Determine the microscopic origin of acoustically active DX-center traps ([link](https://www.emergentmind.com/open-problems/determine-origin-acoustically-active-dx-center-traps))
-
-  Identify the defects responsible for ultrasound-induced DX-center restructuring in GaN/AlGaN/AlN heterostructures, distinguishing oxygen impurities from alloy fluctuations and other mechanisms.
-
-- Coherence between acoustically induced spectral sidebands ([link](https://www.emergentmind.com/open-problems/coherence-between-acoustically-induced-spectral-sidebands))
-
-  Characterize coherence among the fluorescence sidebands generated by acoustic modulation of a quantum dot.
-
-### Ultrasonic sensing and acoustic source estimation
-
-- Direct resolution of initial gas entrapments in nickel foam using SAM ([link](https://www.emergentmind.com/open-problems/sam-direct-resolution-initial-gas-entrapments-foam))
-
-  Use volumetric scanning acoustic microscopy to distinguish trapped gas from nickel-foam electrode structure directly, without requiring subtraction-based segmentation.
-
-- Characterize ultrasonic sensing in fog, rain, and snow ([link](https://www.emergentmind.com/open-problems/characterize-ultrasonic-sensing-in-fog-rain-and-snow))
-
-  Measure how precipitation and fog affect a ski-mounted ultrasonic time-of-flight instrument and validate its performance in field conditions.
-
-- Validate ultrasonic sensing under realistic ski-jumping airflow ([link](https://www.emergentmind.com/open-problems/validate-ultrasonic-sensing-under-realistic-ski-jumping-airflow))
-
-  Determine whether airflow at ski-jumping speeds distorts ultrasonic propagation enough to bias the instrument's distance and edge-angle measurements.
-
-- Cause of low-frequency TF6 elevation deviation ([link](https://www.emergentmind.com/open-problems/cause-of-low-frequency-tf6-elevation-deviation))
-
-  Explain the unusually large low-frequency elevation error of a six-element tight-frame cardioid array used to estimate acoustic-intensity direction.
-
-- Predictive modeling of meteoroid fragmentation-source spectra ([link](https://www.emergentmind.com/open-problems/predictive-model-meteoroid-fragmentation-source-spectrum))
-
-  Predict the initial infrasound spectrum directly from the physics of meteoroid fragmentation.
-
-- Nature of the AS-component tone under symmetric forcing ([link](https://www.emergentmind.com/open-problems/nature-of-as-tone-under-symmetric-forcing))
-
-  Establish whether an antisymmetric tone observed in forced supersonic twin jets arises from a screech resonance or responds directly to the imposed forcing.
-
-### Elastic waves and seismological acoustics
-
-- Existence and uniqueness of subsonic surface-wave speed in generalized Cosserat continua ([link](https://www.emergentmind.com/open-problems/existence-uniqueness-subsonic-love-wave-speed-cosserat-generalised-continua))
-
-  Prove that generalized Cosserat models admit a unique physically admissible Love-wave speed, with depth-decaying solutions and spurious secular-equation roots excluded.
-
-- Exact solution of the Stroh characteristic equation for Cosserat elastic materials ([link](https://www.emergentmind.com/open-problems/exact-stroh-characteristic-equation-cosserat-elasticity))
-
-  Obtain explicit characteristic roots, eigenvectors, and wave amplitudes for the Stroh formulation of Love waves in isotropic Cosserat solids.
-
-- Rapid, high-resolution 3D seismic wavefield prediction ([link](https://www.emergentmind.com/open-problems/best-approach-rapid-high-resolution-3d-seismic-wavefields))
-
-  Benchmark reduced-order and machine-learning approaches for realistic heterogeneous three-dimensional seismic media, balancing prediction speed against resolution and fidelity to topography, attenuation, and site effects.
+### Adjacent lead: uncertainty for closed-loop beamforming
 
 - Uncertainty in Rayleigh-wave phase velocity and beamforming source location ([link](https://www.emergentmind.com/open-problems/quantify-uncertainty-rayleigh-phase-velocity-and-beamforming-location))
 
   Propagate uncertainty through surface-wave velocity estimation and seismic beamforming, including its effect on inferred source properties such as fjord-seiche amplitude.
 
-### Mechanical metamaterials and nonlinear lattice waves
-
-- Robustness of non-reciprocal breathing solitons to disorder and noise ([link](https://www.emergentmind.com/open-problems/robustness-to-disorder-and-noise-non-reciprocal-breathers))
-
-  Quantify how manufacturing disorder and random disturbances affect the survival, speed, and amplitude of traveling breathing solitons in active mechanical metamaterials.
-
-- Increase the stability range of non-reciprocal breathing solitons ([link](https://www.emergentmind.com/open-problems/increase-stability-range-non-reciprocal-breathing-solitons))
-
-  Expand the parameter range and lifetime of traveling breathers sustained by a balance between directional gain and dissipation.
-
-- Number and universality of transition waves in tristable metamaterial lattices ([link](https://www.emergentmind.com/open-problems/number-and-universality-of-transition-waves-tristable-lattices))
-
-  Classify the transition waves supported by magnetically configured tristable lattices and determine whether their properties follow a universal law.
-
-- Interaction of transition waves with finite boundaries in tristable lattices ([link](https://www.emergentmind.com/open-problems/transition-wave-boundary-interactions-tristable-lattices))
-
-  Determine when a transition wave reflects, transmits, or changes type at a finite boundary in a one-dimensional tristable mechanical lattice.
-
-- q-gap breathers and transition fronts beyond FPUT and in higher dimensions ([link](https://www.emergentmind.com/open-problems/q-gap-breathers-transition-fronts-higher-dimensions-beyond-fput))
-
-  Extend the existence and dynamics of breathers and fronts to higher-dimensional, periodically modulated lattices, including phononic media with wavenumber gaps.
+  Possible FUS extension: investigate whether this uncertainty-propagation framework can support feedback-driven beamforming updates under uncertain skull wave speeds. The cataloged problem concerns seismic source localization; its application to closed-loop transcranial focusing remains to be established.
 
 ## Emergent Mind — Broader neurotechnology
 
@@ -220,37 +98,26 @@ These entries include an overarching question and several separately cataloged m
 
   Determine the long-term effects on neurons of retroviral vector-mediated genome insertion, expression of non-human opsin proteins, and prolonged optical exposure used in optogenetic neuromodulation, in order to establish the safety and stability required for translation to human applications.
 
-- Overall efficiency of the proposed spatio-temporal Fourier synthesis methods ([link](https://www.emergentmind.com/open-problems/overall-efficiency-stfs-methods))
+- Efficiency and waveform design for spatio-temporal Fourier synthesis deep-brain stimulation
 
-  Determine the overall efficiency of the spatio-temporal Fourier synthesis deep-brain stimulation techniques that employ multiple electrode pairs with sinusoidal currents, including the capability to deliver effective stimulation to targeted deep-brain regions.
+  Evaluate stimulation delivered to deep targets by multiple electrode pairs driven with sinusoidal currents, and optimize the resulting excitation. Four questions from one paper form this thread:
 
-- Optimal spike waveform shapes and timing for Fourier-synthesized deep-brain stimulation ([link](https://www.emergentmind.com/open-problems/optimal-spike-shapes-and-timing-stfs-dbs))
-
-  Determine the optimal spike waveform shapes and temporal timing parameters for non-invasive deep-brain stimulation generated via spatio-temporal Fourier synthesis using multiple electrode pairs driven by sinusoidal harmonics, with the goal of concentrating stimulus power into brief high-amplitude pulses while maintaining low skin sensation.
-
-- Efficacy of chirping harmonic frequencies for enhanced stimulation ([link](https://www.emergentmind.com/open-problems/efficacy-chirping-harmonics-stfs-dbs))
-
-  Ascertain whether linearly increasing (chirping) harmonic frequencies in the sinusoidal components used for spatio-temporal Fourier synthesis enhance the effectiveness of non-invasive deep-brain stimulation compared to non-chirped harmonics.
-
-- Effectiveness of noisy excitation using irrational frequency components ([link](https://www.emergentmind.com/open-problems/effectiveness-noisy-excitation-irrational-frequencies))
-
-  Determine whether quasi-periodic noisy excitation produced by combining sinusoidal components with irrational frequency values is more effective for non-invasive deep-brain stimulation via spatio-temporal Fourier synthesis than deterministic harmonic configurations.
+  - [Overall efficiency](https://www.emergentmind.com/open-problems/overall-efficiency-stfs-methods): quantify effective stimulation at the intended deep-brain targets.
+  - [Spike shapes and timing](https://www.emergentmind.com/open-problems/optimal-spike-shapes-and-timing-stfs-dbs): concentrate power into brief pulses while limiting skin sensation.
+  - [Chirped harmonics](https://www.emergentmind.com/open-problems/efficacy-chirping-harmonics-stfs-dbs): test whether increasing harmonic frequencies improves stimulation.
+  - [Irrational frequency components](https://www.emergentmind.com/open-problems/effectiveness-noisy-excitation-irrational-frequencies): compare quasi-periodic excitation with deterministic harmonics.
 
 - Validity of Gabriel et al. tissue dielectric model below 10 Hz ([link](https://www.emergentmind.com/open-problems/validity-of-gabriel-model-below-10-hz))
 
   Ascertain the validity of the Gabriel et al. parametric model for dielectric properties of biological tissues at frequencies below 10 Hz, which lie outside the experimental data range used for fitting, to ensure accurate selection of conductivity and permittivity for low-frequency neuromodulation waveforms.
 
-- Transferability of the EEG-based speech decoder to new participants ([link](https://www.emergentmind.com/open-problems/transferability-eeg-speech-decoder-across-participants))
+- Transfer and generalization of non-invasive EEG/EMG speech decoding
 
-  Determine whether the EEG-based speech decoding system trained via CLIP alignment between EEG and pre-trained audio embeddings using 175 hours of overt speech data from a single healthy participant can be transferred to other participants, and quantify the amount of participant-specific data required to enable such transferability through fine-tuning or adaptation.
+  Establish how speech decoders transfer across participants, recording configurations, and clinical populations, including the adaptation data required. Three variants are grouped here:
 
-- Validation of non-invasive EEG speech decoding in individuals with speech disabilities and attempted speech ([link](https://www.emergentmind.com/open-problems/validate-eeg-speech-decoding-in-speech-disabilities-and-attempted-speech))
-
-  Validate whether high-accuracy non-invasive EEG-based speech decoding, trained on overt speech from healthy individuals, can be achieved in individuals with speech disabilities, including using non-invasive recordings during attempted speech under data collection protocols analogous to those used for invasive measurements.
-
-- Effectiveness of single-model approaches for silent speech decoding under heterogeneous EEG/EMG electrode configurations and transfer to patients ([link](https://www.emergentmind.com/open-problems/effectiveness-heterogeneous-electrodes-silent-speech-decoding-and-transfer))
-
-  Determine the effectiveness of single-model deep neural network architectures that handle heterogeneous EEG and electromyography (EMG) electrode configurations for silent speech decoding tasks, and ascertain the efficacy of knowledge transfer from models trained on healthy individuals to patients with neurodegenerative diseases, when using non-invasive EEG/EMG signals.
+  - [Across participants](https://www.emergentmind.com/open-problems/transferability-eeg-speech-decoder-across-participants): transfer a CLIP-aligned EEG decoder trained on 175 hours of overt speech from one healthy participant and quantify the required participant-specific data.
+  - [Speech disabilities and attempted speech](https://www.emergentmind.com/open-problems/validate-eeg-speech-decoding-in-speech-disabilities-and-attempted-speech): validate transfer from healthy overt speech to people with speech disabilities and attempted-speech recordings.
+  - [Heterogeneous electrodes and patient transfer](https://www.emergentmind.com/open-problems/effectiveness-heterogeneous-electrodes-silent-speech-decoding-and-transfer): test a single silent-speech model across EEG/EMG electrode configurations and transfer from healthy participants to patients with neurodegenerative diseases.
 
 - Bridge laboratory BCI paradigms and embodied, fluid robotic interaction ([link](https://www.emergentmind.com/open-problems/bridge-bci-paradigms-and-embodied-fluid-robotic-interaction))
 
@@ -290,96 +157,24 @@ These entries include an overarching question and several separately cataloged m
 
   Identify tissue conductivity values appropriate for direct-current head models, then measure how they evolve with applied current and exposure duration. Non-DC measurements and decreasing stimulation impedance make constant, purely resistive tissue assignments uncertain. Source paper: [Quasistatic approximation in neuromodulation, arXiv:2402.00486](https://arxiv.org/abs/2402.00486), section 3.4.
 
-The existing **Validity of Gabriel et al. tissue dielectric model below 10 Hz** entry above in this broader-neurotechnology section is also relevant to low-frequency electrical-stimulation modeling and comes from the same paper; it is not duplicated here. Other returned coactivation, TMS, and Fourier-synthesis questions did not establish an additional tDCS-specific problem.
+The **Validity of Gabriel et al. tissue dielectric model below 10 Hz** entry above addresses a related modeling question from the same paper.
 
 ## TB-Science — Focused ultrasound and related ultrasound
 
 - [TASK: Applied Mathematics] Escaping Cycle Skipping in Frequency-Domain Full-Waveform Inversion Without a Low-Frequency Backbone ([link](https://github.com/harbor-framework/terminal-bench-science/pull/997))
 - Add task: usct-soundspeed-fwi (viscoacoustic USCT full-waveform inversion) ([link](https://github.com/harbor-framework/terminal-bench-science/pull/387))
 
-## TB-Science — Acoustic physics
+## TB-Science — Numerics and wave physics for transcranial modeling
 
-Statuses below are from the dashboard snapshot generated on **2026-09-05 at 08:13:57 UTC**. A closed proposal marked approved can have an implemented task; proposal approval and PR merge are different states. Where a proposal and PR describe the same task, they appear together.
-
-The existing [focused-ultrasound and related-ultrasound section](#tb-science--focused-ultrasound-and-related-ultrasound) already includes USCT sound-speed inversion (PR #387, proposal #386) and cycle-skipping-resistant frequency-domain inversion (PR #997, proposal #757); both PRs were open in this snapshot.
-
-### Guided waves, seismic inversion, and phonon scattering
-
-- Guided-Wave Damage Localization — **merged PR** ([PR #707](https://github.com/harbor-framework/terminal-bench-science/pull/707); [proposal #688](https://github.com/harbor-framework/terminal-bench-science/discussions/688))
-
-  Localize damage from experimental guided-wave measurements using a pristine reference, while transferring to different plate geometries and sensor layouts. The PR narrows the original historical-dataset proposal to a localization task.
-
-- Baseline-Free Guided-Wave Damage Localization — **merged PR** ([PR #761](https://github.com/harbor-framework/terminal-bench-science/pull/761); [proposal #730](https://github.com/harbor-framework/terminal-bench-science/discussions/730))
-
-  Infer damage coordinates from the current multichannel inspection alone, exploiting propagation geometry and self-consistency between sensing paths when no healthy measurement is available.
-
-- ABAQUS-Informed Digital Twin for Crack Identification — **merged PR** ([PR #1015](https://github.com/harbor-framework/terminal-bench-science/pull/1015); [proposal #889](https://github.com/harbor-framework/terminal-bench-science/discussions/889))
-
-  Transfer a simulated healthy guided-wave response to experimental crack localization despite mismatched geometry, transducer layouts, and amplitudes. The packaged finite-element baseline is generated offline; running ABAQUS is not part of the task.
+The [focused-ultrasound and related-ultrasound section](#tb-science--focused-ultrasound-and-related-ultrasound) retains USCT sound-speed inversion (PR #387, proposal #386) and cycle-skipping-resistant frequency-domain inversion (PR #997, proposal #757); both PRs were open in this snapshot. The two tasks below complete the four-task ultrasound and related-methods selection.
 
 - Crosswell seismic imaging: recover an inter-well velocity anomaly — **open PR** ([PR #374](https://github.com/harbor-framework/terminal-bench-science/pull/374); [proposal #375](https://github.com/harbor-framework/terminal-bench-science/discussions/375))
 
   Recover a two-dimensional P-wave velocity field from transmitted borehole seismograms. The workflow requires acoustic forward modeling, absorbing boundaries, inverse-model gradients, and an optimization strategy that avoids cycle skipping. Closed PR #671 is an additional submission for the same named task and is not counted separately.
 
-- Surface-wave dispersion and earthquake magnitude from analog WWSSN seismograms — **approved proposal** ([discussion #842](https://github.com/harbor-framework/terminal-bench-science/discussions/842))
+- Baseline-Free Guided-Wave Damage Localization — **merged PR** ([PR #761](https://github.com/harbor-framework/terminal-bench-science/pull/761); [proposal #730](https://github.com/harbor-framework/terminal-bench-science/discussions/730))
 
-  Digitize and calibrate historical seismograms, then estimate Rayleigh- and Love-wave group-velocity dispersion and surface-wave magnitude. Crossed traces, instrument response, timing, and polarity errors can bias the inferred wave physics.
-
-- Interfacial Phonon-Scattering Model Discrimination (AMM/DMM/Mixed) — **open PR** ([PR #622](https://github.com/harbor-framework/terminal-bench-science/pull/622); [proposal #619](https://github.com/harbor-framework/terminal-bench-science/discussions/619))
-
-  Distinguish acoustic-mismatch, diffuse-mismatch, and partially specular interface models from noisy angle- and frequency-dependent transmission scans. Jointly estimate physical parameters, background, and cutoff behavior rather than assuming the scattering mechanism.
-
-### Relevant rejected proposals
-
-These are acoustic research leads present in the dashboard, but they were rejected as TB-Science proposals.
-
-- Supercritical Traveling-Wave Thermoacoustic Growth and Saturation Fit — **rejected proposal** ([discussion #1105](https://github.com/harbor-framework/terminal-bench-science/discussions/1105))
-
-  Infer oscillation frequency, linear growth, cubic saturation, and acoustic-energy terms from engine startup traces, then predict withheld growth and saturation behavior within the specified supercritical regime.
-
-- Boundary-Layer-Conditioned Hydrofoil Cavitation-Noise Inception Fit — **rejected proposal** ([discussion #1079](https://github.com/harbor-framework/terminal-bench-science/discussions/1079))
-
-  Estimate cavitation inception and boundary-layer regime from calibrated hydrofoil acoustic spectra while accounting for differences between laminar, transitional, and turbulent inflow conditions.
-
-- Two-Dimensional Whale Localization with Asynchronous Recorder Clocks — **rejected proposal** ([discussion #1088](https://github.com/harbor-framework/terminal-bench-science/discussions/1088))
-
-  Jointly recover call locations, effective underwater sound speed, and recorder clock offsets and drift from pre-associated arrival times under a two-dimensional propagation model.
-
-- Staggered-Grid Seismic-Wave DSL Lowering with Operator Certificate — **rejected proposal** ([discussion #1194](https://github.com/harbor-framework/terminal-bench-science/discussions/1194))
-
-  Translate symbolic heterogeneous acoustic equations into staggered-grid computational kernels, verifying material-interface and absorbing-layer operators against reference wavefields.
-
-### Related wave, lattice, and signal-processing tasks
-
-These broaden the collection beyond conventional fluid acoustics; the particular connection is stated in each summary.
-
-- Phonon mean-free-path spectrum from size-dependent thermal conductivity — **approved proposal** ([discussion #618](https://github.com/harbor-framework/terminal-bench-science/discussions/618))
-
-  Invert size-dependent conductivity measurements to recover a nonnegative phonon transport spectrum and contact offset, choosing regularization consistently with measurement noise. Connection: lattice-vibration transport and scattering.
-
-- ARPES electron–phonon self-energy and coupling reconstruction — **approved proposal** ([discussion #616](https://github.com/harbor-framework/terminal-bench-science/discussions/616))
-
-  Recover electronic self-energy, the phonon coupling spectrum, and mass renormalization from noisy photoemission maps through line-shape fitting and constrained inversion. Connection: electron–lattice-vibration coupling.
-
-- Phonon dispersion and dynamical stability — **closed, unmerged PR** ([PR #241](https://github.com/harbor-framework/terminal-bench-science/pull/241))
-
-  Compute phonon dispersion and assess lattice stability from force-constant matrices. Connection: vibrational modes in solids. The PR description is brief, so detailed task requirements were not established from it.
-
-- Periodic forcing-source identification in a resonance-dominated nonlinear system — **approved proposal** ([discussion #1261](https://github.com/harbor-framework/terminal-bench-science/discussions/1261))
-
-  Recover simultaneous forcing sources and their waveforms using sparse sensors when all sources excite the same tones. The physical task uses basin hydrodynamics; its dependence on array amplitude and phase connects directly to acoustic source localization.
-
-- Streaming cancellation of a vocoder excitation leak — **approved proposal** ([discussion #939](https://github.com/harbor-framework/terminal-bench-science/discussions/939))
-
-  Remove a changing audio artifact in real time when the reference itself contains desired speech. Connection: system-identification difficulties shared with acoustic echo cancellation and active noise control; the submitted task concerns a synthesized-audio signal path.
-
-- Earthquake hypocenter location from raw seismic waveforms — **approved proposal; closed, unmerged PR** ([proposal #78](https://github.com/harbor-framework/terminal-bench-science/discussions/78); [PR #79](https://github.com/harbor-framework/terminal-bench-science/pull/79))
-
-  Detect P-wave arrivals in noisy recordings, choose a travel-time model, and invert for source position and origin time with outlier handling. The updated waveform-based proposal supersedes the simpler arrival-time proposal #72 for this listing.
-
-- Two-species Vlasov–Poisson solver validation — **approved proposal; closed, unmerged linked PR** ([proposal #914](https://github.com/harbor-framework/terminal-bench-science/discussions/914); [PR #920](https://github.com/harbor-framework/terminal-bench-science/pull/920))
-
-  The proposal includes extracting ion-acoustic oscillation frequencies and damping after a fast Langmuir transient, then checking the kinetic solver against dispersion theory. Connection: plasma acoustic modes. The linked PR evolved into a broader multi-regime solver and plasma-echo task.
+  Infer damage coordinates from the current multichannel inspection alone, exploiting propagation geometry and self-consistency between sensing paths when no healthy measurement is available.
 
 ## TB-Science — Broader neurotechnology
 
@@ -390,21 +185,4 @@ These broaden the collection beyond conventional fluid acoustics; the particular
 - Blind estimation of neural signal complexity from EEG ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/283))
 - Estimating contextual semantic contributions to continuous-speech EEG under acoustic controls ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/1689))
 - Full MEG pipeline from raw recording to cortical source dynamics ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/104))
-- Neurodata Without Boredom: Benchmarking Agentic AI for Data Reuse ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/172))
 - Linear dynamic causal modeling with closed-form inversion and Bayesian model comparison via synthetic fixture verification ([link](https://github.com/harbor-framework/terminal-bench-science/discussions/118))
-- [TASK: Life Sciences] Mixed-Cohort pCASL Arterial Spin Labeling CBF Quantifier ([link](https://github.com/harbor-framework/terminal-bench-science/pull/142))
-- [TASK: Neuroscience] Quantitative T1/T2 mapping from multi-contrast MRI ([link](https://github.com/harbor-framework/terminal-bench-science/pull/1485))
-- [TASK: Neuroscience] Neuroimaging task qsm recon challenge 2.0 ([link](https://github.com/harbor-framework/terminal-bench-science/pull/33))
-- [TASK: life-science/neuroscience] Cross-scanner MRI Harmonization ([link](https://github.com/harbor-framework/terminal-bench-science/pull/999))
-- [TASK: Neuroscience] NAcc reward-anticipation confound resolution ([link](https://github.com/harbor-framework/terminal-bench-science/pull/721))
-- [TASK: life-science/neuroscience] Neuroimaging evidence audit ([link](https://github.com/harbor-framework/terminal-bench-science/pull/898))
-
-### tDCS coverage
-
-No explicit tDCS task was found in the titles and bodies of the 944 proposals and 436 PRs in the inspected dashboard snapshot. Searches covered `tDCS`, `transcranial direct current`, `direct-current stimulation`, `transcranial electrical`, and `electrode montage`. This is a search result for that snapshot, not a claim that no such task exists elsewhere or will be added later.
-
-## Search coverage and provenance
-
-- **Emergent Mind:** searched its [open-problem index](https://www.emergentmind.com/open-problems) and the public JSON endpoint used by that index, supplying all category IDs for the main searches. Queries covered `tDCS`, `transcranial direct current stimulation`, `acoustic`, `acoustics`, `ultrasound`, `acoustic metamaterials`, `acoustic wave propagation`, `cavitation`, `phonons`, `acoustic attenuation`, `nonlinear acoustics`, `acoustic inverse scattering`, `acoustic radiation force`, `thermoacoustics`, and `seismic elastic waves`. The catalog returned up to 50 ranked results per query, including unrelated semantic matches; this is a screened discovery pass rather than an exhaustive crawl of all 25,943 entries. Each added item links to its individual problem page. The catalog's open-problem label has not been independently revalidated against all subsequent literature.
-- **TB-Science:** searched titles and bodies in the [dashboard's public data](https://github.com/StevenDillmann/tb-science-task-dashboard/blob/main/public/data.json), generated at `2026-09-05T08:13:57.797788+00:00`, containing 944 proposals and 436 PRs. The snapshot reported successful proposal and PR fetches and `partial: false`. Keyword families included electrical stimulation, acoustics, ultrasound, cavitation, sound speed, Helmholtz, seismic waves, guided waves, transducers, piezoelectricity, and phonons. Counts describe this snapshot's contents, not a guarantee of every historical GitHub submission.
-- **Selection and deduplication:** retained questions about physical sound generation, propagation, scattering, sensing, elastic waves, and related lattice dynamics. Generic speech generation, audio classification, ultrasound-image clinical prediction, unrelated electromagnetic waveguides, and incidental keyword mentions were excluded. Proposal–PR pairs are grouped; existing FUS and neurotechnology entries are cross-referenced. Separate hypotheses within one paper remain separate when the catalog treats them as distinct problems.
